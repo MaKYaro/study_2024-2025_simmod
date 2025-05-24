@@ -1,0 +1,31 @@
+GENERATE (Exponential(1,0,1.75)) ; 
+
+TRANSFER 0.33,go,Obsl_3;
+go TRANSFER 0.5,Obsl_1,Obsl_2 ; 
+
+Obsl_1 QUEUE Other1 ; 
+SEIZE punkt1 ;  
+DEPART Other1 ; 
+ADVANCE 4,3 ;
+RELEASE punkt1 ;
+TERMINATE ;
+
+Obsl_2 QUEUE Other2 ; 
+SEIZE punkt2 ;  
+DEPART Other2 ; 
+ADVANCE 4,3 ;
+RELEASE punkt2 ;
+TERMINATE ;
+
+Obsl_3 QUEUE Other3 ; 
+SEIZE punkt3 ;  
+DEPART Other3 ; 
+ADVANCE 4,3 ;
+RELEASE punkt3 ;
+TERMINATE ;
+
+GENERATE 10080 ;
+TERMINATE 1 ;
+START 1 ;
+
+

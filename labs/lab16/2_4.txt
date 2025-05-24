@@ -1,0 +1,13 @@
+punkt STORAGE 4;
+GENERATE (Exponential(1,0,1.75))
+
+QUEUE Other ;
+ENTER punkt ;
+DEPART Other ;
+ADVANCE 4,3 ;
+LEAVE punkt ;
+TERMINATE ;
+
+GENERATE 10080 ;
+TERMINATE 1 ;
+START 1 ;
