@@ -1,0 +1,31 @@
+GENERATE 10,5,,,1
+ASSIGN 1,0
+QUEUE arrival
+landing GATE NU runway,wait
+SEIZE runway
+DEPART arrival
+ADVANCE 2
+RELEASE runway
+TERMINATE 0
+
+wait TEST L p1,5,goaway
+ADVANCE 5
+ASSIGN 1+,1
+
+TRANSFER 0,landing
+goaway SEIZE reserve
+DEPART arrival
+RELEASE reserve
+TERMINATE 0
+
+GENERATE 10,2,,,2
+QUEUE takeoff
+SEIZE runway
+DEPART takeoff
+ADVANCE 2
+RELEASE runway
+TERMINATE 0
+
+GENERATE 1440
+TERMINATE 1
+START 1
